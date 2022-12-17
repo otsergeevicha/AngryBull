@@ -48,15 +48,6 @@ public class ResultBar : MonoBehaviour
 
     private void AddStar()
     {
-        _textCountStar.text = _slider.fillAmount switch
-        {
-            > 0f and < .2f  => 0.ToString(),
-            > .2f and < .4f => 1.ToString(),
-            > .4f and < .6f => 2.ToString(),
-            > .6f and < .8f => 3.ToString(),
-            > .8f and < 1f  => 4.ToString(),
-            > 1f            => 5.ToString(),
-            _               => _textCountStar.text
-        };
+        _textCountStar.text = Mathf.FloorToInt(Mathf.Lerp(0, 5f, _result)).ToString();
     }
 }

@@ -59,7 +59,6 @@ public class TimerLevelView : MonoBehaviour
             Time.timeScale = 0;
             _saveLoad.Save();
             _windowWin.gameObject.SetActive(true);
-            Debug.Log("Время стопнулось");
             TimeExpired?.Invoke();
             _enemySpawner.OffVisible();
             _villianSpawner.OffVisible();

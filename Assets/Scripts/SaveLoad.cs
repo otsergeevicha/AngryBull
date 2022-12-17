@@ -26,18 +26,15 @@ public class SaveLoad : MonoBehaviour
 
     public void SaveStarsData(int currentScene, int amountStar)
     {
-
-        if(_dataBase.StarsDataLevel.ContainsKey(currentScene) == false)
-            _dataBase.StarsDataLevel.Add(currentScene, amountStar);
-        else
-            _dataBase.StarsDataLevel[currentScene] = amountStar;
+        _dataBase.Add(currentScene, amountStar);
 
         Save();
     }
 
     public int ReadStarData(int indexScene)
-    {
-        _dataBase.StarsDataLevel.TryGetValue(indexScene, out int amountStar);
-        return amountStar;
-    }
+        => _dataBase.Read(indexScene);
+
+    [ContextMenu("ClearPlayerPrefs")]
+    private void ClearPlayerPrefs()
+        => PlayerPrefs.DeleteAll();
 }
