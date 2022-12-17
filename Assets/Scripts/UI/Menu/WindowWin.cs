@@ -7,6 +7,10 @@ public class WindowWin : MonoBehaviour
     [SerializeField] private WaveFactory _waveFactory;
     [SerializeField] private GameObject _nextButton;
     [SerializeField] private GameObject _payNextButton;
+    [SerializeField] private SceneController _sceneController;
+    [SerializeField] private SaveLoad _saveLoad;
+
+    [SerializeField] private Level[] _levels;
 
     private void OnEnable()
     {
@@ -21,7 +25,11 @@ public class WindowWin : MonoBehaviour
     public void OnMenuLevel()
     {
         _celebrationBull.gameObject.SetActive(false);
+        _levels[_sceneController.CurrentScene].RenderStars(_saveLoad.ReadStarData(_sceneController.CurrentScene));
         _menuLevels.gameObject.SetActive(true);
+
+        for(int i = 0; i < _levels.Length; i++)
+            _levels[i].RenderStars(_saveLoad.ReadStarData(i));
     }
 
     public void OnCelebrationBull()

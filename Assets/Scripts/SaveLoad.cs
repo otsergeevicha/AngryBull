@@ -6,7 +6,7 @@ public class SaveLoad : MonoBehaviour
 
     private DataBase _dataBase;
 
-    private void Awake()
+    private void OnEnable()
     {
         _dataBase = PlayerPrefs.HasKey(StarKey)
             ? JsonUtility.FromJson<DataBase>(PlayerPrefs.GetString(StarKey))
@@ -18,13 +18,20 @@ public class SaveLoad : MonoBehaviour
         Save();
     }
 
-    public void AddStarsData(int currentScene, int amountStar)
+    public void Save()
     {
+        PlayerPrefs.SetString(StarKey, JsonUtility.ToJson(_dataBase));
+        PlayerPrefs.Save();
+    }
+
+    public void SaveStarsData(int currentScene, int amountStar)
+    {
+
         if(_dataBase.StarsDataLevel.ContainsKey(currentScene) == false)
             _dataBase.StarsDataLevel.Add(currentScene, amountStar);
         else
             _dataBase.StarsDataLevel[currentScene] = amountStar;
-        
+
         Save();
     }
 
@@ -32,11 +39,5 @@ public class SaveLoad : MonoBehaviour
     {
         _dataBase.StarsDataLevel.TryGetValue(indexScene, out int amountStar);
         return amountStar;
-    }
-
-    private void Save()
-    {
-        PlayerPrefs.SetString(StarKey, JsonUtility.ToJson(_dataBase));
-        PlayerPrefs.Save();
     }
 }

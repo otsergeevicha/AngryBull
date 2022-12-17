@@ -5,4 +5,5 @@ using System.Collections.Generic;
 public class DataBase
 {
     public Dictionary<int, int> StarsDataLevel = new Dictionary<int, int>();
+
 }

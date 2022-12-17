@@ -12,8 +12,6 @@ public class ResultBar : MonoBehaviour
     [SerializeField] private Image _slider;
     [SerializeField] private TMP_Text _textCountStar;
 
-    public event Action<float> Changed;
-
     private float _result;
     private Coroutine _coroutine;
 
@@ -30,7 +28,6 @@ public class ResultBar : MonoBehaviour
     private void OnChangeView()
     {
         _result = _barView.GetProgress();
-        Changed?.Invoke(_result);
         Render();
     }
 
@@ -53,11 +50,12 @@ public class ResultBar : MonoBehaviour
     {
         _textCountStar.text = _slider.fillAmount switch
         {
-            > 0f and < .2f  => 1.ToString(),
-            > .2f and < .4f => 2.ToString(),
-            > .4f and < .6f => 3.ToString(),
-            > .6f and < .8f => 4.ToString(),
-            > .8f           => 5.ToString(),
+            > 0f and < .2f  => 0.ToString(),
+            > .2f and < .4f => 1.ToString(),
+            > .4f and < .6f => 2.ToString(),
+            > .6f and < .8f => 3.ToString(),
+            > .8f and < 1f  => 4.ToString(),
+            > 1f            => 5.ToString(),
             _               => _textCountStar.text
         };
     }

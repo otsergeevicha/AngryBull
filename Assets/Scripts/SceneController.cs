@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
 
 public class SceneController : MonoBehaviour
 {
-    public event Action<int> ChangedScene;
+    [SerializeField] private SaveLoad _saveLoad;
 
+    public int CurrentScene => SceneManager.GetActiveScene().buildIndex;
+    
     public void SelectLevel(int sceneNumber)
     {
         SceneManager.LoadScene(sceneNumber);
-        ChangedScene?.Invoke(sceneNumber);
     }
 }

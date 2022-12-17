@@ -11,6 +11,8 @@ public class TimerLevelView : MonoBehaviour
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private VillianSpawner _villianSpawner;
 
+    [SerializeField] private SaveLoad _saveLoad;
+
     public event Action TimeExpired;
 
     private float _maxTimeLevel = 15f;
@@ -26,6 +28,9 @@ public class TimerLevelView : MonoBehaviour
 
     private void Update()
     {
+        if(_currentTime >= 1)
+            return;
+        
         RenderTimer();
     }
 
@@ -52,7 +57,9 @@ public class TimerLevelView : MonoBehaviour
         if(_currentTime >= 1)
         {
             Time.timeScale = 0;
+            _saveLoad.Save();
             _windowWin.gameObject.SetActive(true);
+            Debug.Log("Время стопнулось");
             TimeExpired?.Invoke();
             _enemySpawner.OffVisible();
             _villianSpawner.OffVisible();

@@ -6,7 +6,7 @@ public class Level : MonoBehaviour
     
     public void RenderStars(int currentAmountStars)
     {
-        for(int i = 0; i <= currentAmountStars; i++)
+        for(int i = 0; i <= currentAmountStars - 1; i++)
             _stars[i].SetActive(true);
     }
 }

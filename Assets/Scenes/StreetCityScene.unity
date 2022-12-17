@@ -6920,6 +6920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac46e1349688240948ebbeb31b6fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _saveLoad: {fileID: 595365516}
 --- !u!4 &595365514
 Transform:
   m_ObjectHideFlags: 0
@@ -6947,13 +6948,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6269c87635fc04d88db172ac850823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resultBar: {fileID: 1796191084317722099}
-  _sceneController: {fileID: 595365513}
-  _levels:
-  - {fileID: 1863901738}
-  - {fileID: 33132273}
-  - {fileID: 36786606}
+  _barView: {fileID: 142064520}
+  _timerLevel: {fileID: 1323678191}
   _saveLoad: {fileID: 595365516}
+  _sceneController: {fileID: 595365513}
 --- !u!114 &595365516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14798,6 +14796,7 @@ MonoBehaviour:
   _windowWin: {fileID: 2001329158}
   _enemySpawner: {fileID: 818407501}
   _villianSpawner: {fileID: 1030778862}
+  _saveLoad: {fileID: 595365516}
 --- !u!1 &1337739090
 GameObject:
   m_ObjectHideFlags: 0
@@ -33837,6 +33836,12 @@ MonoBehaviour:
   _waveFactory: {fileID: 371813678}
   _nextButton: {fileID: 2082264635558939469}
   _payNextButton: {fileID: 1108818154}
+  _sceneController: {fileID: 595365513}
+  _saveLoad: {fileID: 595365516}
+  _levels:
+  - {fileID: 1863901738}
+  - {fileID: 33132273}
+  - {fileID: 36786606}
 --- !u!1 &2014474117
 GameObject:
   m_ObjectHideFlags: 0
@@ -55768,6 +55773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3018264354842736461}
+  - component: {fileID: 3018264354842736462}
   m_Layer: 0
   m_Name: GeneralPlatform
   m_TagString: Untagged
@@ -55802,6 +55808,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3018264354842736462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3018264354842736457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1949806e48c424ab0650eba2122494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &3039109578443907161
 MeshRenderer:
   m_ObjectHideFlags: 0
