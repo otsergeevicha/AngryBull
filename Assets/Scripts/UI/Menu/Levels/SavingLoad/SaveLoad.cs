@@ -26,7 +26,8 @@ public class SaveLoad : MonoBehaviour
 
     public void SaveStarsData(int currentScene, int amountStar)
     {
-        _dataBase.Add(currentScene, amountStar);
+        if(_dataBase.Read(currentScene) < amountStar)
+            _dataBase.Add(currentScene, amountStar);
 
         Save();
     }

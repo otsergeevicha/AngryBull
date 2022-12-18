@@ -23,7 +23,8 @@ public class LevelDataStars : MonoBehaviour
 
     private void NormalizationCountStars()
     {
-        _savedResult = _result;
+        if(_savedResult < _result)
+            _savedResult = _result;
 
         _currentAmountStars = Mathf.FloorToInt(Mathf.Lerp(0, 5f, _result));
     }
