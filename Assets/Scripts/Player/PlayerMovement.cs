@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if(_joystick.Horizontal != 0 || _joystick.Vertical != 0)
             _animator.SetBool(_hashAnimation.RunBull, true);
 
-        _rigidbody.velocity = new Vector3(-_joystick.Horizontal * _speed, _rigidbody.velocity.y, _joystick.Vertical * _speed);
+        _rigidbody.velocity = new Vector3(_joystick.Horizontal * _speed, _rigidbody.velocity.y, _joystick.Vertical * _speed);
 
         Rotate();
         SpeedChanged?.Invoke(_speed);

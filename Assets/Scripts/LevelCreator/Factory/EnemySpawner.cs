@@ -9,8 +9,8 @@ public class EnemySpawner : MonoBehaviour
 
     private const float PositionY = 0f;
     private const int BorderSpawn = 7;
-    private const int MinDistanceSpawn = 0;
-    private const int MaxDistanceSpawn = 135;
+    private const int MinDistanceSpawn = 5;
+    private const int MaxDistanceSpawn = 72;
 
     private List<Enemy> _enemies;
 

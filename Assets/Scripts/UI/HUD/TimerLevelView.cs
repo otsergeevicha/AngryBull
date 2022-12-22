@@ -15,8 +15,8 @@ public class TimerLevelView : MonoBehaviour
 
     public event Action TimeExpired;
 
-    private float _maxTimeLevel = 15f;
-    private float _leftTime = 15f;
+    private float _maxTimeLevel = 25f;
+    private float _leftTime = 25f;
     private float _elapsedTime = 0;
     private float _currentTime = 0;
     private float _seconds;

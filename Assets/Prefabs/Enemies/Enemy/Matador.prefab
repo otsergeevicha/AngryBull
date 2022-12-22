@@ -637,6 +637,18 @@ MonoBehaviour:
   - {fileID: 621044661602173678}
   - {fileID: 6090934336637669804}
   - {fileID: 9176196343058687601}
+  _capsuleColliders:
+  - {fileID: 1019234828348721285}
+  - {fileID: 1483358462436171134}
+  - {fileID: 6153967340383884798}
+  - {fileID: 1107821341495337527}
+  - {fileID: 6545967256178905643}
+  - {fileID: 5675140246871458592}
+  - {fileID: 621044661602173676}
+  - {fileID: 6090934336637669803}
+  _boxColliders:
+  - {fileID: 5443958221094317921}
+  - {fileID: 5028625341453269288}
 --- !u!114 &5325754422012120863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6881,9 +6893,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6532591166354895491}
-  m_LocalRotation: {x: 0.14499296, y: -0.03244394, z: -0.054139405, w: 0.9874175}
-  m_LocalPosition: {x: -7.4505804e-11, y: 0.0026308703, z: 1.2223608e-11}
-  m_LocalScale: {x: 0.99999946, y: 0.9999988, z: 1.0000023}
+  m_LocalRotation: {x: 0.14499293, y: -0.032443974, z: -0.054139405, w: 0.9874176}
+  m_LocalPosition: {x: -7.423346e-10, y: 0.0026308715, z: 2.9103818e-11}
+  m_LocalScale: {x: 0.9999994, y: 0.9999987, z: 1.0000021}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3105370298759266361}

@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     private Player _player;
 
     private float _speed = 0;
-    private int _price = 20;
+    private int _price = 2;
 
     public Transform CameraPoint{get;private set;}
     public bool Alive{get;private set;} = false;

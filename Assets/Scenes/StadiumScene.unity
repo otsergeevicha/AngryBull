@@ -486,7 +486,6 @@ MonoBehaviour:
   _payNextButton: {fileID: 174527869}
   _sceneController: {fileID: 1662183794}
   _saveLoad: {fileID: 1662183797}
-  _timerLevel: {fileID: 2039841521}
   _levels:
   - {fileID: 1011366890}
   - {fileID: 1282187376}
@@ -1244,7 +1243,7 @@ MonoBehaviour:
   VillianCapacity: 3
   EnemyPrefabs:
   - {fileID: 5143543742026319027, guid: 5a81344898ea1c746ba9d0d7d9aa2709, type: 3}
-  EnemyCapacity: 210
+  EnemyCapacity: 97
   TargetEnemy: {fileID: 2072734894}
   SafePoints:
   - {fileID: 1530923272118621256}
@@ -1269,7 +1268,7 @@ MonoBehaviour:
   OutdoorItemsPrefabs:
   - {fileID: 616096309101193266, guid: da6ebeb1d6f86be409a7c01dde6b9e0e, type: 3}
   - {fileID: 3213943784744739358, guid: 8b51ae9ccd9b2bd41a007a91b2fa8e49, type: 3}
-  OutdoorItemsCapacity: 25
+  OutdoorItemsCapacity: 15
   Name: WAVE TREE
 --- !u!1 &146133602
 GameObject:
@@ -2096,7 +2095,7 @@ MonoBehaviour:
   VillianCapacity: 3
   EnemyPrefabs:
   - {fileID: 5143543742026319027, guid: 5a81344898ea1c746ba9d0d7d9aa2709, type: 3}
-  EnemyCapacity: 150
+  EnemyCapacity: 67
   TargetEnemy: {fileID: 2072734894}
   SafePoints:
   - {fileID: 1530923272118621256}
@@ -2121,7 +2120,7 @@ MonoBehaviour:
   OutdoorItemsPrefabs:
   - {fileID: 616096309101193266, guid: da6ebeb1d6f86be409a7c01dde6b9e0e, type: 3}
   - {fileID: 3213943784744739358, guid: 8b51ae9ccd9b2bd41a007a91b2fa8e49, type: 3}
-  OutdoorItemsCapacity: 15
+  OutdoorItemsCapacity: 10
   Name: WAVE ONE
 --- !u!1 &220640337
 GameObject:
@@ -35343,7 +35342,7 @@ MonoBehaviour:
   VillianCapacity: 3
   EnemyPrefabs:
   - {fileID: 5143543742026319027, guid: 5a81344898ea1c746ba9d0d7d9aa2709, type: 3}
-  EnemyCapacity: 180
+  EnemyCapacity: 82
   TargetEnemy: {fileID: 2072734894}
   SafePoints:
   - {fileID: 1530923272118621256}
@@ -35368,7 +35367,7 @@ MonoBehaviour:
   OutdoorItemsPrefabs:
   - {fileID: 616096309101193266, guid: da6ebeb1d6f86be409a7c01dde6b9e0e, type: 3}
   - {fileID: 3213943784744739358, guid: 8b51ae9ccd9b2bd41a007a91b2fa8e49, type: 3}
-  OutdoorItemsCapacity: 20
+  OutdoorItemsCapacity: 12
   Name: WAVE TWO
 --- !u!1 &737189665
 GameObject:
@@ -52082,7 +52081,7 @@ MonoBehaviour:
   VillianCapacity: 3
   EnemyPrefabs:
   - {fileID: 5143543742026319027, guid: 5a81344898ea1c746ba9d0d7d9aa2709, type: 3}
-  EnemyCapacity: 255
+  EnemyCapacity: 112
   TargetEnemy: {fileID: 2072734894}
   SafePoints:
   - {fileID: 1530923272118621256}
@@ -52107,7 +52106,7 @@ MonoBehaviour:
   OutdoorItemsPrefabs:
   - {fileID: 3213943784744739358, guid: 8b51ae9ccd9b2bd41a007a91b2fa8e49, type: 3}
   - {fileID: 616096309101193266, guid: da6ebeb1d6f86be409a7c01dde6b9e0e, type: 3}
-  OutdoorItemsCapacity: 30
+  OutdoorItemsCapacity: 17
   Name: WAVE FOUR
 --- !u!1 &1011366884
 GameObject:
@@ -96793,7 +96792,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac46e1349688240948ebbeb31b6fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveLoad: {fileID: 1662183797}
 --- !u!4 &1662183795
 Transform:
   m_ObjectHideFlags: 0
@@ -104647,7 +104645,7 @@ MonoBehaviour:
   VillianCapacity: 3
   EnemyPrefabs:
   - {fileID: 5143543742026319027, guid: 5a81344898ea1c746ba9d0d7d9aa2709, type: 3}
-  EnemyCapacity: 285
+  EnemyCapacity: 122
   TargetEnemy: {fileID: 2072734894}
   SafePoints:
   - {fileID: 1530923272118621256}
@@ -104672,7 +104670,7 @@ MonoBehaviour:
   OutdoorItemsPrefabs:
   - {fileID: 616096309101193266, guid: da6ebeb1d6f86be409a7c01dde6b9e0e, type: 3}
   - {fileID: 3213943784744739358, guid: 8b51ae9ccd9b2bd41a007a91b2fa8e49, type: 3}
-  OutdoorItemsCapacity: 35
+  OutdoorItemsCapacity: 20
   Name: WAVE FIVE
 --- !u!4 &2067696736
 Transform:
