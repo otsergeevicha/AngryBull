@@ -9,6 +9,8 @@ public class WindowWin : MonoBehaviour
     [SerializeField] private GameObject _payNextButton;
     [SerializeField] private SceneController _sceneController;
     [SerializeField] private SaveLoad _saveLoad;
+    [SerializeField] private GameObject _panelMenuLevel;
+    [SerializeField] private GameObject _panelBull;
 
     [SerializeField] private Level[] _levels;
 
@@ -25,7 +27,9 @@ public class WindowWin : MonoBehaviour
     public void OnMenuLevel()
     {
         _celebrationBull.gameObject.SetActive(false);
+        _panelBull.gameObject.SetActive(false);
         _levels[_sceneController.CurrentScene].RenderStars(_saveLoad.ReadStarData(_sceneController.CurrentScene));
+        _panelMenuLevel.gameObject.SetActive(true);
         _menuLevels.gameObject.SetActive(true);
 
         for(int i = 0; i < _levels.Length; i++)
@@ -34,7 +38,9 @@ public class WindowWin : MonoBehaviour
 
     public void OnCelebrationBull()
     {
+        _panelBull.gameObject.SetActive(true);
         _celebrationBull.gameObject.SetActive(true);
+        _panelMenuLevel.gameObject.SetActive(false);
         _menuLevels.gameObject.SetActive(false);
     }
 

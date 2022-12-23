@@ -10,13 +10,14 @@ public class TimerLevelView : MonoBehaviour
     [SerializeField] private WindowWin _windowWin;
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private VillianSpawner _villianSpawner;
+    [SerializeField] private GameObject _menuCanvas;
 
     [SerializeField] private SaveLoad _saveLoad;
 
     public event Action TimeExpired;
 
-    private float _maxTimeLevel = 25f;
-    private float _leftTime = 25f;
+    private float _maxTimeLevel = 5f;
+    private float _leftTime = 5f;
     private float _elapsedTime = 0;
     private float _currentTime = 0;
     private float _seconds;
@@ -36,12 +37,13 @@ public class TimerLevelView : MonoBehaviour
 
     public void OffWindowWin()
     {
-        _maxTimeLevel = 15f;
-        _leftTime = 15f;
+        _maxTimeLevel = 5f;
+        _leftTime = 5f;
         _elapsedTime = 0;
         _currentTime = 0;
         _seconds = 0;
         Time.timeScale = 1;
+        _menuCanvas.gameObject.SetActive(false);
         _windowWin.gameObject.SetActive(false);
     }
 
@@ -58,6 +60,7 @@ public class TimerLevelView : MonoBehaviour
         {
             Time.timeScale = 0;
             _saveLoad.Save();
+            _menuCanvas.gameObject.SetActive(true);
             _windowWin.gameObject.SetActive(true);
             TimeExpired?.Invoke();
             _enemySpawner.OffVisible();
