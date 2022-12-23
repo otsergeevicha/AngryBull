@@ -11,6 +11,8 @@ public class WindowWin : MonoBehaviour
     [SerializeField] private SaveLoad _saveLoad;
     [SerializeField] private GameObject _panelMenuLevel;
     [SerializeField] private GameObject _panelBull;
+    [SerializeField] private GameObject _panelButtonPay;
+    [SerializeField] private GameObject _panelButtonNext;
 
     [SerializeField] private Level[] _levels;
 
@@ -47,6 +49,8 @@ public class WindowWin : MonoBehaviour
     private void ChangeButton()
     {
         _nextButton.gameObject.SetActive(false);
+        _panelButtonNext.gameObject.SetActive(false);
+        _panelButtonPay.gameObject.SetActive(true);
         _payNextButton.gameObject.SetActive(true);
     }
 }

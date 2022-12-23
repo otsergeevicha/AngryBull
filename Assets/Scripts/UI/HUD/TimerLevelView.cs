@@ -16,8 +16,8 @@ public class TimerLevelView : MonoBehaviour
 
     public event Action TimeExpired;
 
-    private float _maxTimeLevel = 5f;
-    private float _leftTime = 5f;
+    private float _maxTimeLevel = 10f;
+    private float _leftTime = 10f;
     private float _elapsedTime = 0;
     private float _currentTime = 0;
     private float _seconds;
@@ -37,8 +37,8 @@ public class TimerLevelView : MonoBehaviour
 
     public void OffWindowWin()
     {
-        _maxTimeLevel = 5f;
-        _leftTime = 5f;
+        _maxTimeLevel = 10f;
+        _leftTime = 10f;
         _elapsedTime = 0;
         _currentTime = 0;
         _seconds = 0;
