@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FixedJoystick _joystick;
     [SerializeField] private Animator _animator;
     [SerializeField] private HashAnimation _hashAnimation;
     [SerializeField] private PlayerState _playerState;
+    [SerializeField] private Joystick _joystick;
 
     public event Action<float> SpeedChanged;
-
+    
     private float _speed;
 
     private void Update()

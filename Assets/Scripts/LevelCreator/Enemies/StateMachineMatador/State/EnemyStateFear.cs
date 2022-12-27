@@ -32,7 +32,7 @@ public class EnemyStateFear : EnemyState
 
     private void CheckChance()
     {
-        int probabilityPositionChange = _random.Next(MinChance, MaxChance + 1);
+        int probabilityPositionChange = _random.Next(MinChance, MaxChance);
 
         if(probabilityPositionChange == MaxChance)
             Feared?.Invoke(ChangeTarget());

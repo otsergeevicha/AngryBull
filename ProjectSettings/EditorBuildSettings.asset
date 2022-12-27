@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RanchScene.unity
     guid: 613e6e36cea97bf4d96a75c918ee000e
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 97a3e3136f040c240bae0edd51ab3d2b, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 4a4d25fed6150b344988b2a52fcba852, type: 2}
