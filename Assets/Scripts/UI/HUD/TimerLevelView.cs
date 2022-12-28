@@ -10,7 +10,9 @@ public class TimerLevelView : MonoBehaviour
     [SerializeField] private WindowWin _windowWin;
     [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private VillianSpawner _villianSpawner;
+    [SerializeField] private Joystick _joystick;
     [SerializeField] private GameObject _menuCanvas;
+    [SerializeField] private GameObject _hudCanvas;
 
     [SerializeField] private SaveLoad _saveLoad;
 
@@ -44,6 +46,8 @@ public class TimerLevelView : MonoBehaviour
         _seconds = 0;
         Time.timeScale = 1;
         _menuCanvas.gameObject.SetActive(false);
+        _hudCanvas.gameObject.SetActive(true);
+        _joystick.SetZeroPosition();
         _windowWin.gameObject.SetActive(false);
     }
 
@@ -60,6 +64,7 @@ public class TimerLevelView : MonoBehaviour
         {
             Time.timeScale = 0;
             _saveLoad.Save();
+            _hudCanvas.gameObject.SetActive(false);
             _menuCanvas.gameObject.SetActive(true);
             _windowWin.gameObject.SetActive(true);
             TimeExpired?.Invoke();

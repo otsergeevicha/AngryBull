@@ -47,6 +47,8 @@ public sealed class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler,
         _background.gameObject.SetActive(false);
     }
 
+    public void SetZeroPosition() => _input = Vector2.zero;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         _background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
@@ -96,7 +98,7 @@ public sealed class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler,
         {
             return Vector2.zero;
         }
-
+        
         var sizeDelta = _baseRect.sizeDelta;
         var pivotOffset = _baseRect.pivot * sizeDelta;
         return localPoint - _background.anchorMax * sizeDelta + pivotOffset;
