@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3007127999468153503}
   - component: {fileID: 632361560496704360}
   - component: {fileID: 2788013437188183485}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: StreetBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7840376373435116258}
   - component: {fileID: 7833377863674872326}
   - component: {fileID: 7823702162499531512}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Crate_01 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

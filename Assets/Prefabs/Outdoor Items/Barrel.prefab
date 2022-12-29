@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 291375645587336856}
   - component: {fileID: 319938332094359032}
   - component: {fileID: 312835830834775798}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SM_Prop_Barrel_01 (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4639787031356106808}
   - component: {fileID: 616096309101193266}
   - component: {fileID: -9179571797704987359}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

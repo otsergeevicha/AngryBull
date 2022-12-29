@@ -13,6 +13,7 @@ public class TimerLevelView : MonoBehaviour
     [SerializeField] private Joystick _joystick;
     [SerializeField] private GameObject _menuCanvas;
     [SerializeField] private GameObject _hudCanvas;
+    [SerializeField] private GameObject _player;
 
     [SerializeField] private SaveLoad _saveLoad;
 
@@ -46,6 +47,7 @@ public class TimerLevelView : MonoBehaviour
         _seconds = 0;
         Time.timeScale = 1;
         _menuCanvas.gameObject.SetActive(false);
+        _player.gameObject.SetActive(true);
         _hudCanvas.gameObject.SetActive(true);
         _joystick.SetZeroPosition();
         _windowWin.gameObject.SetActive(false);
@@ -64,6 +66,7 @@ public class TimerLevelView : MonoBehaviour
         {
             Time.timeScale = 0;
             _saveLoad.Save();
+            _player.gameObject.SetActive(false);
             _hudCanvas.gameObject.SetActive(false);
             _menuCanvas.gameObject.SetActive(true);
             _windowWin.gameObject.SetActive(true);
